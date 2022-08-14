@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
 *{
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+    
 }
 /* .img-background{
     position: relative;
@@ -24,19 +27,104 @@
     background-color: red;
 } */
 
+body{
+    display: flex;
+    color: rgb(190, 81, 190);
+     background-color: rgb(31, 29, 29); 
+    
+}
+
 .img-background{
     background-image: url("background.jpg");
-    width: 800px;
-    height: 1100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-position: center;
+	background-size: cover;
+	width: 45vw;
+	height: 980px;
+	display: flex;
+	flex-direction: column;
     
 }
 .logo{
-    height: 200px;
-    width: 210px;
+    height: 280px;
+    opacity: 0.7;
 }
+
 .logo-background{
-    background-color: black;
+	width: 45vw;
+    height: 240px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40vh;
 }
+
+.logo-background h1{
+    font-family: 'Silkscreen', cursive;
+    font-size: 55px;
+    font-weight: bold;
+    color: rgb(199, 93, 199);
+}
+.main{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+form{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgb(190, 81, 190);
+    margin-top: 30px;
+ 
+}
+
+.text{
+    margin-top: 40px;
+    margin-left: 50px;
+    white-space: pre;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.5rem;
+    
+}
+
+input,label{
+    display: block;
+    font-family: 'Signika Negative', sans-serif;
+}
+input{
+    border: 0px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    
+}
+.form-elements{
+    float: left;
+    margin-right: 150px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn{
+    margin-top: 30px;
+    margin-left: 60px;
+    width: fit-content;
+    height: 30px;
+    font-family: 'Signika Negative', sans-serif;
+    background-color: rgb(199, 93, 199);
+    border:0px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+
+}
+
+input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
