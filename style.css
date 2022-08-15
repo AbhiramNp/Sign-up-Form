@@ -1,57 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Rubik+Iso&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
-*{
-box-sizing: border-box;
-margin: 0;
-    
-}
-/* .img-background{
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.background{
-    height: 1100px;
-    width: 800px;
-    position: relative;
-    
-}
-.logo{
-    height: 200px;
-    width: 210px;
-    position: absolute;
-    top: 550px;
-    left: 350px;
 
-    background-color: red;
-} */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 
 body{
     display: flex;
     color: rgb(190, 81, 190);
-     background-color: rgb(31, 29, 29); 
-    
+    background-color: rgb(31, 29, 29); 
 }
 
+/* background and image property */
 .img-background{
     background-image: url("background.jpg");
 	background-position: center;
 	background-size: cover;
-	width: 45vw;
+	width: max-content;
 	height: 980px;
 	display: flex;
-	flex-direction: column;
-    
+	flex-direction: column;  
 }
+
+/* logo property */
 .logo{
-    height: 280px;
+    height: 270px;
     opacity: 0.7;
 }
 
+/* logo black background property */
 .logo-background{
-	width: 45vw;
-    height: 240px;
+	width: max-content;
+    height: 230px;
 	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
@@ -64,10 +49,10 @@ body{
     font-size: 55px;
     font-weight: bold;
     color: rgb(199, 93, 199);
+    overflow:hidden
 }
+
 .main{
-    border: 1px solid black;
-    width: 100%;
     display: flex;
     flex-direction: column;    
 }
@@ -78,15 +63,22 @@ form{
     width: 100%;
     box-shadow: 0px 5px 5px rgb(190, 81, 190);
     margin-top: 30px;
- 
 }
 
 .text{
     margin-top: 40px;
     margin-left: 50px;
-    white-space: pre;
+    white-space: pre;    /* pre allows to write it the sameway as we do it in an editor */          
     font-family: 'Signika Negative', sans-serif;
     font-size: 1.5rem;
+}
+
+input{
+    border-radius: 5px;
+    font-size: 1.3rem;
+    border: none;
+    resize: none;
+    outline: none;
     
 }
 
@@ -94,12 +86,26 @@ input,label{
     display: block;
     font-family: 'Signika Negative', sans-serif;
 }
-input{
-    border: 0px;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    
+
+input:invalid {
+    border: 3px solid red;
 }
+  
+input:valid {
+    border: 3px solid green;
+}
+input:focus{
+    border: 2px solid rgb(190, 81, 190);
+}
+
+/* used to remove the number up and down arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* aligns form elements in 2x2x2 format */
 .form-elements{
     float: left;
     margin-right: 150px;
@@ -111,20 +117,39 @@ input{
 .btn{
     margin-top: 30px;
     margin-left: 60px;
-    width: fit-content;
-    height: 30px;
+    width: 200px;
+    height: 50px;
     font-family: 'Signika Negative', sans-serif;
     background-color: rgb(199, 93, 199);
     border:0px;
     border-radius: 5px;
     font-size: 1.3rem;
-
+    text-align: center;
+    cursor: pointer;  
 }
 
-input:invalid {
-    border: 2px solid red;
-  }
-  
-  input:valid {
-    border: 2px solid black;
-  }
+ #last-para{
+    margin-top: 30px;
+    margin-left: 60px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.5rem;
+ }
+
+ #last-para a{
+    text-decoration: none;
+    color: pink;
+ }
+
+ .credits{
+    position: absolute;
+    bottom: 0px;
+    left: 12%;  
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.2rem;
+ }
+
+ .credits a{
+    text-decoration: none;
+    color: pink;
+ }
+

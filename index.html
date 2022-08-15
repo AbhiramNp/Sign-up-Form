@@ -8,14 +8,21 @@
     <title>SIGN-UP-FORM</title>
 </head>
 <body>
-    
-        <div class="img-background">
-            <div class="logo-background">
-                <img src="logo.png" class="logo" alt="Logo">
-                <h1>HACKERBLOCK</h1>
-            </div>
-        <p>photo by</p>
+
+    <!-- left-image-logo-hackerblock part  -->
+    <div class="img-background">
+         <div class="logo-background">
+            <img src="logo.png" class="logo" alt="Logo">
+               <h1>HACKERBLOCK</h1>
         </div>
+
+        <p class="credits">photo by <a href="https://unsplash.com/@luthermeb">Luther.M.E. Bottrill</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+
+    </div>
+
+    <!-- left-image-logo-hackerblock part  -->
+
+    <!-- right -text-form-button -->
     <div class="main">
         <p class="text">
   This is not a real online service! You know you need something
@@ -31,44 +38,46 @@
   Let's do this!</p>
 
         
-    <form action="#">
+    <form action="#" id="form">
+
         <div class="form1">
+        
         <div class="form-elements">
         <label for="first-name">FIRST NAME</label>
-        <input type="text" name="first-name" id="first-name" placeholder="Thor">
+        <input type="text" name="first-name" id="first-name" placeholder="Obito" required>
         </div>
         <div class="form-elements">
         <label for="last-name">LAST NAME</label>
-        <input type="text" name="last-name" id="last-name">
+        <input type="text" name="last-name" id="last-name" placeholder="Uchiha" required>
         </div>
-
-        
         <div class="form-elements">
         <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email" title="Enter a proper mail id">
+        <input type="email" name="email" id="email" placeholder="Enter a proper mail id" required>
         </div>
-        
         <div class="form-elements">
         <label for="phone">PHONE</label>
-        <input type="number" name="phone" id="phone"  maxlength=10>
+        <input type="number" name="phone" id="phone" placeholder="Enter a valid phone number" required>
         </div>
-
         <div class="form-elements">
         <label for="pass">PASSWORD</label>
-        <input type="password" name="pass" id="pass">
+        <input type="password" name="pass" id="pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+        title="Enter a password with minimum 8 characters,a capital,a number and a special character" placeholder="Enter your password" required>
         </div>
-
         <div class="form-elements">
         <label for="conpass">CONFIRM PASSWORD</label>
-        <input type="password" name="conpass" id="conpass">
+        <input type="password" name="conpass" id="conpass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+        title="Enter a password with minimum 8 characters,a capital,a number and a special character" placeholder="Confirm your password" required>
         </div>
+        
         </div>
     </form>
-    <button class="btn" type="submit">Create Account</button>
+
+    <button class="btn" type="submit" form="form">Create Account</button>
+   
+    <p id="last-para">Already have an account ? <a href="#">Log in</a></p>
+
     </div>
-    
-    
-          
+       <!-- right -text-form-button -->
     
 </body>
 </html>
